@@ -1,0 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Pathway+Gothic+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans&display=swap');
+
+body {
+  font-family: Poppins;
+  color: #ffffff;
+  text-align: center;
+  line-height: 1.38;
+  letter-spacing: 0.4px;
+}
+
+header {
+  background-color: #0181C8;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+}
+
+#torch-icon {
+  width: 20px;
+  filter: invert(100%) sepia(0%) saturate(7480%) hue-rotate(42deg) brightness(107%) contrast(100%);
+}
+
+#title-line {
+  background-color: white;
+  height: 2px;
+  width: 15%;
+  margin-left: 1%;
+  margin-right: 1%;
+}
+
+.titleAnchor{
+  text-decoration: none;
+}
+
+#title {
+  font-size: 56px;
+  letter-spacing: 4px;
+  font-family: 'Pathway Gothic One', Arial, Helvetica, sans-serif;
+  font-weight: bolder;
+  background-color: #0181C8;
+  color: #ffffff;
+}
+
+#title:hover .blue{
+  color: #006095;
+}
+#title:hover .yellow{
+  color: #F9AB31;
+}
+#title:hover .black{
+  color: #020202;
+}
+#title:hover .green{
+  color: #02964D;
+}
+#title:hover .red{
+  color: #E83854;
+}
+
+#darkBlue{
+  background-color: #006095;
+  width: 100%;
+  height: 30px;
+}
+
+#olympicColours {
+  display: flex;
+  width: 70%;
+  margin-left: 15%;
+  margin-bottom: 30px;
+}
+
+.bar {
+  height: 5px;
+  width: 20%;
+}
+
+#blue {
+  background-color: #077EC7;
+}
+
+#yellow {
+  background-color: #F9AB31;
+}
+
+#black {
+  background-color: #020202;
+}
+
+#green {
+  background-color: #02964D;
+}
+
+#red {
+  background-color: #E83854;
+}
+
+#introduction {
+  color: black;
+  font-family: Arial, Helvetica, sans-serif;
+  width: 70%;
+  margin-left: 15%;
+}
+
+.hidden{
+  display: hidden;
+}
+
+#country-search {
+ margin-right: 15px;
+ display:inline-block;
+}
+
+#country-search-input {
+ width: 250px;
+ height: 36px;
+ border-radius: 3px;
+ padding-left:50px;
+ border: solid 1px #cecccf;
+ font-family: Work Sans;
+ font-size: 18px;
+ font-weight: 500;
+ line-height: 1.0;
+ letter-spacing: 0.4px;
+ text-align: left;
+ color: #4f4f4f;
+}
+
+#magnifying-glass {
+  position:relative;
+  top:3px;
+  left:35px;
+}
+
+#search {
+  display: block;
+  padding: 32px 0;
+}
+
+#container {
+  background-color: #ffffff;
+  color: #000000;
+  width: 70%;
+  margin: 0 auto;
+}
+
+table {
+  width: 100%;
+  text-align: center;
+}
+
+#country-header th {
+  background: #006095;
+  padding-top: 18px;
+}
+
+.country-link *{
+  text-decoration: none;
+}
+
+.country-link *:hover{
+  color: #0181C8;
+}
+
+td, th {
+  padding-top: 10px;
+}
+
+th, .table-descriptor {
+  font-size:14px;
+  background-color: #006095;
+  font-family: Work Sans;
+}
+
+td.table-value {
+  color: #7a797a;
+  font-size: 16px;
+  font-family: Work Sans;
+  height: 19px;
+  letter-spacing: 0.4px;
+}
+
+tr {
+  height: 40px;
+  background-color: #FFFFFF;
+}
+
+#country-search-button {
+  width: 120px;
+  height: 35px;
+  border-radius: 54px;
+  background-color: #006095;
+  font-family: Work Sans;
+  line-height: 1.13;
+  font-size: 15px;
+  border: none;
+  color: #ffffff;
+}
+
+#country-search-button:hover {
+  background-color: #0181C8;
+}
+
+.subheader {
+  height: 50px;
+  background-color: #006095;
+  font-family: 'Pathway Gothic One', Arial, Helvetica, sans-serif;
+  font-size: 26px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  color: #000000;
+  padding-top:10px
+}
+
+.gold-medal-table th:nth-child(-n+3) {
+  width:15%;
+}
+
+.gold-medal-table th:nth-child(n+4) {
+  width:20%;
+}
+
+@media (max-width: 750px) {
+  #torch-icon {
+    width: 15px;
+  }
+  
+  #title-line {
+    width: 15%;
+  }
+  
+  #title {
+    font-size: 42px;
+    letter-spacing: 3px;
+  }
+
+  #olympicColours {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  #introduction {
+    font-size: 12px;
+    width: 95%;
+    margin-left: 2.5%;
+  }
+
+  #container {
+    width: 100%;
+  }
+
+  th, .table-descriptor {
+    font-size:12px;
+  }
+  
+  td.table-value {
+    font-size: 12px;
+  }
+
+  tr {
+    font-size: 12px;
+  }
+}
+
+.sort, .country-link * {
+  cursor:pointer;
+  color: black;
+}
