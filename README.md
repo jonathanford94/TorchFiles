@@ -1,4 +1,4 @@
-<img src="./img/TorchFilesScreenShot.png"></img>
+<img src="./src/img/TorchFiles.png"></img>
 
 ## TORCH FILES ️🏅
 
