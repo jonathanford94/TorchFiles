@@ -1,6 +1,8 @@
 import React from 'react';
 import GoldMedalMetrics from '../../utils/GoldMedalMetrics';
 import { Link } from 'react-router-dom';
+import up from '../../img/up.svg';
+import down from '../../img/down.svg';
 
 class CountryList extends React.Component {
   constructor(props) {
@@ -49,20 +51,20 @@ class CountryList extends React.Component {
         <tbody><tr className="table-header country-header">
           <th>
             COUNTRY
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('name', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('name', false)} />
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('name', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('name', false)} />
           </th>
           <th>GDP
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('gdp', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('gdp', false)}/>
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('gdp', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('gdp', false)}/>
           </th>
           <th>POPULATION
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('population', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('population', false)}/>
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('population', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('population', false)}/>
           </th>
           <th># OF GOLD MEDALS
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('medalNumber', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('medalNumber', false)}/>
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('medalNumber', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('medalNumber', false)}/>
           </th>
         </tr>
         {this.renderCountryRows()}

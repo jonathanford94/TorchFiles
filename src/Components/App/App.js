@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { HashRouter as Router, Route } from 'react-router-dom';
+import torch from '../../img/torch.png';
 
 import CountryDetail from '../CountryDetail/CountryDetail';
 import CountryList from '../CountryList/CountryList';
@@ -12,11 +13,11 @@ function App() {
   return (
     <div className="App">
       <header>
-        <img id="torch-icon" alt="" src={require("../../img/torch.png")} />
+        <img id="torch-icon" alt="" src={torch} />
         <div id="title-line"></div>
         <a className="titleAnchor" href="./index.html"><h1 id="title"><span className="blue">TO</span><span className="yellow">RC</span><span className="black">H F</span><span className="green">IL</span><span className="red">ES</span></h1></a>
         <div id="title-line"></div>
-        <img id="torch-icon" alt="" src={require("../../img/torch.png")} />
+        <img id="torch-icon" alt="" src={torch} />
       </header>
       <div id="darkBlue"></div>
       <div id="olympicColours">

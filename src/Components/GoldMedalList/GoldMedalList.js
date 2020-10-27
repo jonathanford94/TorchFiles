@@ -1,5 +1,7 @@
 import React from 'react';
 import GoldMedalMetrics from '../../utils/GoldMedalMetrics';
+import up from '../../img/up.svg';
+import down from '../../img/down.svg';
 
 class GoldMedalList extends React.Component {
   constructor(props) {
@@ -63,24 +65,24 @@ class GoldMedalList extends React.Component {
         <tbody>
         <tr className="table-header country-header">
           <th>YEAR WON
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('year', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('year', false)} />
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('year', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('year', false)} />
           </th>
           <th>SEASON
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('season', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('season', false)} />
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('season', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('season', false)} />
           </th>
           <th>CITY
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('city', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('city', false)} />
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('city', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('city', false)} />
           </th>
           <th>MEDAL WINNER NAME
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('name', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('name', false)} />
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('name', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('name', false)} />
           </th>
           <th>EVENT
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('event', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('event', false)} />
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('event', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('event', false)} />
           </th>
         </tr>
         {this.renderMedalRows()}

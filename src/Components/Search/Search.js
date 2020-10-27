@@ -1,5 +1,6 @@
 import React from 'react';
 import { Redirect } from 'react-router';
+import search from '../../img/magnify.svg';
 
 class Search extends React.Component {
   constructor(props) {
@@ -29,7 +30,7 @@ class Search extends React.Component {
         <div id="search">
           <form onSubmit={this.handleSubmit}>
             <div id="country-search">
-              <img id="magnifying-glass" alt="Search" src={require('../../img/magnify.svg')} />
+              <img id="magnifying-glass" alt="Search" src={search} />
               <input type="text" id="country-search-input" placeholder="Search for a country" value={this.state.value} onChange={this.handleChange} />
             </div>
             <input type="submit" value="SEARCH" id="country-search-button" />
