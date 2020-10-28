@@ -308,6 +308,7 @@ app.get('/country/:countryName/sports', (req, res, next) => {
 });
 
 app.listen(3001, () => {
+  console.log("listening on port 3001");
   let errorThrown = false;
   db.serialize(() => {
     // Drop the tables if they exist
