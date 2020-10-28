@@ -1,5 +1,7 @@
 import React from 'react';
 import GoldMedalMetrics from '../../utils/GoldMedalMetrics';
+import up from '../../img/up.svg';
+import down from '../../img/down.svg';
 
 class Sports extends React.Component {
   constructor(props) {
@@ -60,16 +62,16 @@ class Sports extends React.Component {
         <tbody>
         <tr className="table-header country-header">
           <th>SPORT NAME
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('sport', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('sport', false)} />
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('sport', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('sport', false)} />
           </th>
           <th># OF GOLD MEDALS WON
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('count', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('count', false)} />
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('count', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('count', false)} />
           </th>
           <th>% OF GOLD MEDAL WINS
-            <img className="sort" alt="Sort Ascending" src={require("../../img/up.svg")} onClick={() => this.sortBy('percent', true)}/>
-            <img className="sort" alt="Sort Descending" src={require("../../img/down.svg")} onClick={() => this.sortBy('percent', false)} />
+            <img className="sort" alt="Sort Ascending" src={up} onClick={() => this.sortBy('percent', true)}/>
+            <img className="sort" alt="Sort Descending" src={down} onClick={() => this.sortBy('percent', false)} />
           </th>
         </tr>
         {this.renderSportRows()}
