@@ -1,5 +1,6 @@
 const express = require('express');
 const parse = require('csv-parse');
+const path = require('path');
 const sqlite3 = require('sqlite3');
 const cors = require('cors');
 const fs = require('fs');
@@ -9,6 +10,7 @@ const db = new sqlite3.Database('./gold_medals.sqlite');
 
 const app = express();
 app.use(cors());
+
 
 const lowerCaseObjectKeys = (questionableKeys) => {
   // Valid SQL commands are case-insensitive, but JavaScript is case-sensitive
@@ -310,6 +312,12 @@ app.get('/country/:countryName/sports', (req, res, next) => {
 app.listen(3001, () => {
   console.log("listening on port 3001");
   let errorThrown = false;
+  app.use(express.static(path.join(__dirname, '../../build')));
+  
+  app.get('*', (req,res) =>{
+    res.sendFile(path.join(__dirname+'/../../build/index.html'));
+  });
+  
   db.serialize(() => {
     // Drop the tables if they exist
     db.run("DROP TABLE IF EXISTS Country;");
