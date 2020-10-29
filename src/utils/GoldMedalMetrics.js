@@ -1,13 +1,14 @@
 import 'whatwg-fetch';
 
 const GoldMedalMetrics = {};
-const baseUrl = 'http://torchfiles.jonathan-ford.co.uk/#/';
+const baseUrl = 'http://torchfiles.jonathan-ford.co.uk';
 
 GoldMedalMetrics.fixName = countryName => {
   return countryName.replace(/\w\S*/g, txt => {return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
 };
 
 GoldMedalMetrics.getCountryDetails = country => {
+  console.log("getting a specific country");
   const newCountryName = GoldMedalMetrics.fixName(country);
   const url = `${baseUrl}/country/${newCountryName}`;
   return fetch(url).then(response => {
@@ -21,6 +22,7 @@ GoldMedalMetrics.getCountryDetails = country => {
 };
 
 GoldMedalMetrics.getCountries = (sortBy, isAscending) => {
+  console.log("getting countries");
   let url = `${baseUrl}/country`;
   if (typeof sortBy !== 'undefined' && typeof isAscending !== 'undefined') {
     const descendingString = isAscending ? 'y' : 'n';
