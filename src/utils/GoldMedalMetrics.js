@@ -1,7 +1,7 @@
 import 'whatwg-fetch';
 
 const GoldMedalMetrics = {};
-const baseUrl = 'http://torchfiles.jonathan-ford.co.uk';
+const baseUrl = 'https://torchfiles.jonathan-ford.co.uk';
 
 GoldMedalMetrics.fixName = countryName => {
   return countryName.replace(/\w\S*/g, txt => {return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
